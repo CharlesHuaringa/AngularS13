@@ -1,0 +1,44 @@
+<h3>USO DE PIPES</h3>
+<div>
+    <label for="valor">Valor:</label>
+    <input [(ngModel)]="valor" type="text" id="valor" name="valor"> <br>
+    <div>
+        <br>
+        Resultado: {{valor | uppercase}}
+    </div>
+</div>
+<br>
+<br>
+
+
+<h3>CURRENCY PIPES</h3>
+<div>
+    <label for="valor">Monto:</label>
+    <input [(ngModel)]="monto" type="number" class="form-control" id="monto" name="monto">
+    <br>
+    <br>
+    <select id="moneda"  [(ngModel)] = "moneda">
+        <option selected>Seleccione Moneda</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <div>
+        <br>
+        <p> {{monto |currency: moneda}}</p>
+    </div>
+</div>
+
+
+<div>
+    <h3>Tiempo Transcurrido:</h3>
+    <p>Del 01/06/2023 18:00 : {{'01/06/2023 18:00' | pipes }}</p>
+     <br>
+    <p>Del 01/06/2023 13:00 : {{'01/06/2023 14:00' | pipes }}</p>
+     <br>
+    <p>Del 01/04/2023 12:00 : {{'01/04/2023 12:00' | pipes }}</p>
+    <br>
+    <p>Del 10/27/2022 12:00 : {{'10/27/2022 12:00' | pipes }}</p>
+
+</div>
+ 
